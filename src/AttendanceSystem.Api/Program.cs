@@ -1,5 +1,8 @@
 using System.Reflection;
 using AttendanceSystem.Api;
+using AttendanceSystem.Api.Filters;
+using AttendanceSystem.Api.Services;
+using AttendanceSystem.Core.ConfigOptions;
 using AttendanceSystem.Core.Domain.Identity;
 using AttendanceSystem.Core.Models.Content;
 using AttendanceSystem.Core.SeedWorks;
@@ -60,6 +63,13 @@ foreach (var service in services)
 
 //Auto Mapper
 builder.Services.AddAutoMapper(typeof(ClassInListDto));
+
+// Authen and Author
+builder.Services.Configure<JwtTokenSettings>(configuration.GetSection("JwtTokenSettings"));
+builder.Services.AddScoped<SignInManager<AppUser>, SignInManager<AppUser>>();
+builder.Services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
 //Default config for ASP.NET Core
 builder.Services.AddControllers();

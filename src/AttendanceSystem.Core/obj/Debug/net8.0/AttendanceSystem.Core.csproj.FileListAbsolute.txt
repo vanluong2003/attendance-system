@@ -10,3 +10,4 @@ C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\Attend
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\refint\AttendanceSystem.Core.dll
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.pdb
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\ref\AttendanceSystem.Core.dll
+C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.sourcelink.json

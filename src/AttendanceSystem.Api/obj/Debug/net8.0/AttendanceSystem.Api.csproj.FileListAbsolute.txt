@@ -91,3 +91,4 @@ C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\Attend
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Api\bin\Debug\net8.0\MQTTnet.dll
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\AttendanceSystem.Api.sourcelink.json

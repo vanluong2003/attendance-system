@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace AttendanceSystem.Api
+namespace AttendanceSystem.Api.Filters
 {
     public class SwaggerNullableParameterFilter : IParameterFilter
     {

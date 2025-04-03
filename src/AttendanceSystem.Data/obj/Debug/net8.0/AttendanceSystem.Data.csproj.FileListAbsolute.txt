@@ -16,3 +16,4 @@ C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\Attend
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.pdb
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.genruntimeconfig.cache
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\ref\AttendanceSystem.Data.dll
+C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.sourcelink.json

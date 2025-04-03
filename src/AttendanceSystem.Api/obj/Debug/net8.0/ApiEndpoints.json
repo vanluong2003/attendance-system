@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/admin/auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AttendanceSystem.Core.Models.Auth.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AttendanceSystem.Core.Models.Auth.AuthenticatedResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
     "Method": "CreateClass",
     "RelativePath": "api/admin/class",
