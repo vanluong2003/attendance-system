@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\AttendanceSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|d:\\attendancesystem\\src\\attendancesystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Program.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Program.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Api\\Program.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T16:49:08.093Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

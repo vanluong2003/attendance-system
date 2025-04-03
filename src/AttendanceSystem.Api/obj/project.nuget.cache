@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "obkuqErTjFg=",
+  "dgSpecHash": "GLHrnn8/Fw8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\msi laptop\\OneDrive\\Máy tính\\Văn Lương\\AttendanceSystem\\src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj",
+  "projectFilePath": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msi laptop\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\msi laptop\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

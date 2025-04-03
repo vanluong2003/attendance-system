@@ -17,3 +17,22 @@ C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\Attend
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.genruntimeconfig.cache
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\ref\AttendanceSystem.Data.dll
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.sourcelink.json
+D:\AttendanceSystem\src\AttendanceSystem.Data\bin\Debug\net8.0\appsettings.json
+D:\AttendanceSystem\src\AttendanceSystem.Data\bin\Debug\net8.0\AttendanceSystem.Data.deps.json
+D:\AttendanceSystem\src\AttendanceSystem.Data\bin\Debug\net8.0\AttendanceSystem.Data.runtimeconfig.json
+D:\AttendanceSystem\src\AttendanceSystem.Data\bin\Debug\net8.0\AttendanceSystem.Data.dll
+D:\AttendanceSystem\src\AttendanceSystem.Data\bin\Debug\net8.0\AttendanceSystem.Data.pdb
+D:\AttendanceSystem\src\AttendanceSystem.Data\bin\Debug\net8.0\AttendanceSystem.Core.dll
+D:\AttendanceSystem\src\AttendanceSystem.Data\bin\Debug\net8.0\AttendanceSystem.Core.pdb
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.csproj.AssemblyReference.cache
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.AssemblyInfoInputs.cache
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.AssemblyInfo.cs
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.csproj.CoreCompileInputs.cache
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.sourcelink.json
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\Attendan.B12F694A.Up2Date
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.dll
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\refint\AttendanceSystem.Data.dll
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.pdb
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\AttendanceSystem.Data.genruntimeconfig.cache
+D:\AttendanceSystem\src\AttendanceSystem.Data\obj\Debug\net8.0\ref\AttendanceSystem.Data.dll

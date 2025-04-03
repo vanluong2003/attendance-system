@@ -11,3 +11,16 @@ C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\Attend
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.pdb
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\ref\AttendanceSystem.Core.dll
 C:\Users\msi laptop\OneDrive\Máy tính\Văn Lương\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.sourcelink.json
+D:\AttendanceSystem\src\AttendanceSystem.Core\bin\Debug\net8.0\AttendanceSystem.Core.deps.json
+D:\AttendanceSystem\src\AttendanceSystem.Core\bin\Debug\net8.0\AttendanceSystem.Core.dll
+D:\AttendanceSystem\src\AttendanceSystem.Core\bin\Debug\net8.0\AttendanceSystem.Core.pdb
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.csproj.AssemblyReference.cache
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.AssemblyInfoInputs.cache
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.AssemblyInfo.cs
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.csproj.CoreCompileInputs.cache
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.sourcelink.json
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.dll
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\refint\AttendanceSystem.Core.dll
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\AttendanceSystem.Core.pdb
+D:\AttendanceSystem\src\AttendanceSystem.Core\obj\Debug\net8.0\ref\AttendanceSystem.Core.dll

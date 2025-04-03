@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\msi laptop\\OneDrive\\Máy tính\\Văn Lương\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj": {}
+    "D:\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\msi laptop\\OneDrive\\Máy tính\\Văn Lương\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj": {
+    "D:\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msi laptop\\OneDrive\\Máy tính\\Văn Lương\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj",
+        "projectUniqueName": "D:\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj",
         "projectName": "AttendanceSystem.WebApp",
-        "projectPath": "C:\\Users\\msi laptop\\OneDrive\\Máy tính\\Văn Lương\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj",
+        "projectPath": "D:\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj",
         "packagesPath": "C:\\Users\\msi laptop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msi laptop\\OneDrive\\Máy tính\\Văn Lương\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\obj\\",
+        "outputPath": "D:\\AttendanceSystem\\src\\AttendanceSystem.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

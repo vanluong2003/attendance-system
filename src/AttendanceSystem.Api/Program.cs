@@ -17,7 +17,15 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("DefaultConnection");
+var VanLuongCorsPolicy = "TeduCorsPolicy";
 
+builder.Services.AddCors(o => o.AddPolicy(VanLuongCorsPolicy, builder =>
+{
+    builder.AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithOrigins(configuration["AllowedOrigins"])
+        .AllowCredentials();
+}));
 //Config DB Context and ASP.NET Core Identity
 builder.Services.AddDbContext<AttendanceSystemContext>(options =>
             options.UseSqlServer(connectionString));
@@ -103,6 +111,8 @@ if (app.Environment.IsDevelopment())
         c.DisplayRequestDuration();
     });
 }
+
+app.UseCors(VanLuongCorsPolicy);
 
 app.UseHttpsRedirection();
 

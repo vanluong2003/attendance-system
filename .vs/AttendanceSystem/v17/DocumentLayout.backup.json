@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\",
+  "WorkspaceRootPath": "D:\\AttendanceSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|c:\\users\\msi laptop\\onedrive\\m\u00E1y t\u00EDnh\\v\u0103n l\u01B0\u01A1ng\\attendancesystem\\src\\attendancesystem.api\\controllers\\adminapi\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\controllers\\adminapi\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|c:\\users\\msi laptop\\onedrive\\m\u00E1y t\u00EDnh\\v\u0103n l\u01B0\u01A1ng\\attendancesystem\\src\\attendancesystem.core\\seedworks\\constants\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\seedworks\\constants\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|c:\\users\\msi laptop\\onedrive\\m\u00E1y t\u00EDnh\\v\u0103n l\u01B0\u01A1ng\\attendancesystem\\src\\attendancesystem.core\\seedworks\\constants\\permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\seedworks\\constants\\permissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|c:\\users\\msi laptop\\onedrive\\m\u00E1y t\u00EDnh\\v\u0103n l\u01B0\u01A1ng\\attendancesystem\\src\\attendancesystem.api\\filters\\swaggernullableparameterfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\filters\\swaggernullableparameterfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|d:\\attendancesystem\\src\\attendancesystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Roles.cs",
-              "DocumentMoniker": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Roles.cs",
-              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Roles.cs",
-              "ToolTip": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Roles.cs*",
-              "RelativeToolTip": "src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Roles.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T09:02:15.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\AuthController.cs",
-              "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\AuthController.cs",
-              "ToolTip": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\AuthController.cs*",
-              "RelativeToolTip": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\AuthController.cs*",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAUwDoAAABZAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Program.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Program.cs*",
+              "RelativeToolTip": "src\\AttendanceSystem.Api\\Program.cs*",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:56:32.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Permissions.cs",
-              "DocumentMoniker": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Permissions.cs",
-              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Permissions.cs",
-              "ToolTip": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Permissions.cs",
-              "RelativeToolTip": "src\\AttendanceSystem.Core\\SeedWorks\\Constants\\Permissions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:52:09.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SwaggerNullableParameterFilter.cs",
-              "DocumentMoniker": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Api\\Filters\\SwaggerNullableParameterFilter.cs",
-              "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Filters\\SwaggerNullableParameterFilter.cs",
-              "ToolTip": "C:\\Users\\msi laptop\\OneDrive\\M\u00E1y t\u00EDnh\\V\u0103n L\u01B0\u01A1ng\\AttendanceSystem\\src\\AttendanceSystem.Api\\Filters\\SwaggerNullableParameterFilter.cs*",
-              "RelativeToolTip": "src\\AttendanceSystem.Api\\Filters\\SwaggerNullableParameterFilter.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:48:52.416Z",
+              "WhenOpened": "2025-04-03T16:49:08.093Z",
               "EditorCaption": ""
             }
           ]
