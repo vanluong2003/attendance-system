@@ -186,3 +186,4 @@ D:\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\refint\AttendanceS
 D:\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\AttendanceSystem.Api.pdb
 D:\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\AttendanceSystem.Api.genruntimeconfig.cache
 D:\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\ref\AttendanceSystem.Api.dll
+D:\AttendanceSystem\src\AttendanceSystem.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,5 +1,7 @@
 using System.Reflection;
+using System.Text;
 using AttendanceSystem.Api;
+using AttendanceSystem.Api.Authorization;
 using AttendanceSystem.Api.Filters;
 using AttendanceSystem.Api.Services;
 using AttendanceSystem.Core.ConfigOptions;
@@ -9,15 +11,20 @@ using AttendanceSystem.Core.SeedWorks;
 using AttendanceSystem.Data;
 using AttendanceSystem.Data.Repositories;
 using AttendanceSystem.Data.SeedWorks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("DefaultConnection");
 var VanLuongCorsPolicy = "TeduCorsPolicy";
+builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
+builder.Services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
 
 builder.Services.AddCors(o => o.AddPolicy(VanLuongCorsPolicy, builder =>
 {
@@ -98,6 +105,23 @@ builder.Services.AddSwaggerGen(c =>
     c.ParameterFilter<SwaggerNullableParameterFilter>();
 });
 
+builder.Services.AddAuthentication(o =>
+{
+    o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(cfg =>
+{
+    cfg.RequireHttpsMetadata = false;
+    cfg.SaveToken = true;
+
+    cfg.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidIssuer = configuration["JwtTokenSettings:Issuer"],
+        ValidAudience = configuration["JwtTokenSettings:Issuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtTokenSettings:Key"]))
+    };
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -116,6 +140,7 @@ app.UseCors(VanLuongCorsPolicy);
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

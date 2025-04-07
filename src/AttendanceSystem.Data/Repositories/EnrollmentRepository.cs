@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceSystem.Data.Repositories
 {
-    internal class EnrollmentRepository : RepositoryBase<Enrollment, Guid>, IEnrollmentRepository
+    public class EnrollmentRepository : RepositoryBase<Enrollment, Guid>, IEnrollmentRepository
     {
         private readonly IMapper _mapper;
         public EnrollmentRepository(AttendanceSystemContext context, IMapper mapper) : base(context)

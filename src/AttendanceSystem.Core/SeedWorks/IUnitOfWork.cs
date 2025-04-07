@@ -5,6 +5,7 @@ namespace AttendanceSystem.Core.SeedWorks
     public interface IUnitOfWork
     {
         IClassRepository Classes { get; }
+        IDeviceRepository Devices { get; }
         IAttendanceRepository Attendances { get; }
         IClassScheduleRepository ClassSchedules { get; }
         IEnrollmentRepository Enrollments { get; }

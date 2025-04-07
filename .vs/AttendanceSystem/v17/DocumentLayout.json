@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\AttendanceSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|d:\\attendancesystem\\src\\attendancesystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|d:\\attendancesystem\\src\\attendancesystem.core\\models\\content\\devicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\models\\content\\devicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|d:\\attendancesystem\\src\\attendancesystem.api\\controllers\\adminapi\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\controllers\\adminapi\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|d:\\attendancesystem\\src\\attendancesystem.core\\models\\content\\createupdatedevicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\models\\content\\createupdatedevicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Program.cs",
-              "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Program.cs",
-              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Program.cs",
-              "RelativeToolTip": "src\\AttendanceSystem.Api\\Program.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CreateUpdateDeviceRequest.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T16:49:08.093Z",
+              "WhenOpened": "2025-04-07T17:00:35.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeviceDto.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T16:59:51.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeviceController.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowGIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T16:21:05.683Z",
               "EditorCaption": ""
             }
           ]

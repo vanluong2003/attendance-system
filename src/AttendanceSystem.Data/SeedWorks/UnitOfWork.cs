@@ -12,12 +12,14 @@ namespace AttendanceSystem.Data.SeedWorks
         {
             _context = context;
             Classes = new ClassRepository(context, mapper);
+            Devices = new DeviceRepository(context, mapper);
             Attendances = new AttendanceRepository(context, mapper);
             ClassSchedules = new ClassScheduleRepository(context, mapper);
             Enrollments = new EnrollmentRepository(context, mapper);
             Users = new UserRepository(context, mapper);
         }
         public IClassRepository Classes { get; private set; }
+        public IDeviceRepository Devices { get; private set; }
         public IAttendanceRepository Attendances { get; private set; }
         public IClassScheduleRepository ClassSchedules { get; private set; }
         public IEnrollmentRepository Enrollments { get; private set; }

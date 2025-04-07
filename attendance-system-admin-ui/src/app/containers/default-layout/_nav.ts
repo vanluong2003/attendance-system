@@ -8,6 +8,9 @@ export const navItems: INavData[] = [
     badge: {
       color: 'info',
       text: 'NEW'
+    },
+    attributes: {
+      "policyName": "Permissions.Dashboard.View"
     }
   },
   {
@@ -17,11 +20,17 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Lớp học',
-        url: '/content/classes'
+        url: '/content/classes',
+        attributes: {
+          "policyName": "Permissions.Classes.View"
+        }
       },
       {
         name: 'Thiết bị',
-        url: '/content/devices'
+        url: '/content/devices',
+        attributes: {
+          "policyName": "Permissions.Devices.View"
+        }
       }
     ]
   },
@@ -32,11 +41,17 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Quyền',
-        url: '/system/role'
+        url: '/system/roles',
+        attributes: {
+          "policyName": "Permissions.Roles.View"
+        }
       },
       {
         name: 'Người dùng',
-        url: '/system/user'
+        url: '/system/users',
+        attributes: {
+          "policyName": "Permissions.Users.View"
+        }
       }
     ]
   },
