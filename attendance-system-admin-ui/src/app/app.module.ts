@@ -37,7 +37,7 @@ import {
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
-import { ADMIN_API_BASE_URL, AdminApiAuthApiClient, AdminApiDeviceApiClient, AdminApiRoleApiClient, AdminApiTestApiClient, AdminApiTokenApiClient, AdminApiUserApiClient } from './api/admin-api.service.generated';
+import { ADMIN_API_BASE_URL, AdminApiAuthApiClient, AdminApiEnrollmentApiClient, AdminApiClassApiClient, AdminApiDeviceApiClient, AdminApiRoleApiClient, AdminApiTestApiClient, AdminApiTokenApiClient, AdminApiUserApiClient, AdminApiClassScheduleApiClient } from './api/admin-api.service.generated';
 import { environment } from './../environments/environment';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
@@ -46,11 +46,10 @@ import { TokenStorageService } from './shared/services/token-storage.service';
 import { AuthGuard } from './shared/auth.guard';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './shared/interceptors/token.interceptor';
-import { GlobalHttpInterceptorService } from './shared/interceptors/error-handler.interceptor';
 import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { UtilityService } from './shared/services/utility.service';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
-
+import { BroadcastService } from './shared/services/boardcast.service';
 
 const APP_CONTAINERS = [
   DefaultFooterComponent,
@@ -101,7 +100,7 @@ const APP_CONTAINERS = [
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: GlobalHttpInterceptorService,
+      useClass: TokenInterceptor,
       multi: true
     },
     {
@@ -112,6 +111,7 @@ const APP_CONTAINERS = [
     Title,
     MessageService,
     AlertService,
+    BroadcastService,
     AdminApiAuthApiClient,
     TokenStorageService,
     AuthGuard,
@@ -120,6 +120,9 @@ const APP_CONTAINERS = [
     AdminApiRoleApiClient,
     AdminApiUserApiClient,
     AdminApiDeviceApiClient,
+    AdminApiClassApiClient,
+    AdminApiEnrollmentApiClient,
+    AdminApiClassScheduleApiClient,
     DialogService,
     ConfirmationService,
     UtilityService

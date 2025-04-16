@@ -187,3 +187,5 @@ D:\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\AttendanceSystem.A
 D:\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\AttendanceSystem.Api.genruntimeconfig.cache
 D:\AttendanceSystem\src\AttendanceSystem.Api\obj\Debug\net8.0\ref\AttendanceSystem.Api.dll
 D:\AttendanceSystem\src\AttendanceSystem.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\AttendanceSystem\src\AttendanceSystem.Api\bin\Debug\net8.0\MediatR.dll
+D:\AttendanceSystem\src\AttendanceSystem.Api\bin\Debug\net8.0\MediatR.Contracts.dll

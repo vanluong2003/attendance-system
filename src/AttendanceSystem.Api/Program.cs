@@ -26,6 +26,9 @@ var VanLuongCorsPolicy = "TeduCorsPolicy";
 builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
 builder.Services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
 
+//MQTT Service
+builder.Services.AddSingleton<MqttService>();
+
 builder.Services.AddCors(o => o.AddPolicy(VanLuongCorsPolicy, builder =>
 {
     builder.AllowAnyMethod()
@@ -51,11 +54,11 @@ builder.Services.Configure<IdentityOptions>(options =>
     //Lockout settings
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
     options.Lockout.MaxFailedAccessAttempts = 5;
-    options.Lockout.AllowedForNewUsers = true;
+    options.Lockout.AllowedForNewUsers = false;
 
     //User settings
     options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
-    options.User.RequireUniqueEmail = false;
+    options.User.RequireUniqueEmail = true; //
 });
 
 // Add services to the container.
@@ -116,6 +119,8 @@ builder.Services.AddAuthentication(o =>
 
     cfg.TokenValidationParameters = new TokenValidationParameters
     {
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.FromSeconds(0),
         ValidIssuer = configuration["JwtTokenSettings:Issuer"],
         ValidAudience = configuration["JwtTokenSettings:Issuer"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtTokenSettings:Key"]))
@@ -123,6 +128,9 @@ builder.Services.AddAuthentication(o =>
 });
 
 var app = builder.Build();
+
+var mqttService = app.Services.GetRequiredService<MqttService>();
+await mqttService.ConnectAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

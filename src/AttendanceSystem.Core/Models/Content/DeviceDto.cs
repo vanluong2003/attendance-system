@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AttendanceSystem.Core.Domain.Content;
+﻿using AttendanceSystem.Core.Domain.Content;
 using AutoMapper;
 using static AttendanceSystem.Core.Domain.Content.Device;
 

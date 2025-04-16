@@ -5,6 +5,7 @@ using AttendanceSystem.Core.Repositories;
 using AttendanceSystem.Data.SeedWorks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using static AttendanceSystem.Core.SeedWorks.Constants.Permissions;
 
 namespace AttendanceSystem.Data.Repositories
 {
@@ -14,6 +15,10 @@ namespace AttendanceSystem.Data.Repositories
         public DeviceRepository(AttendanceSystemContext context, IMapper mapper) : base(context)
         {
             _mapper = mapper;
+        }
+        public Task<Device> GetByLocation(string location)
+        {
+            return _context.Devices.Where(x => x.Location == location).FirstOrDefaultAsync();
         }
         public async Task<PageResult<DeviceDto>> GetAllPaging(string? keyword, int pageIndex = 1, int pageSize = 10)
         {

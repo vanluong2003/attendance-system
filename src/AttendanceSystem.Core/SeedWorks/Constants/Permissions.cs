@@ -59,5 +59,29 @@ namespace AttendanceSystem.Core.SeedWorks.Constants
             [Description("Xóa thiết bị")]
             public const string Delete = "Permissions.Devices.Delete";
         }
+
+        public static class Enrollments
+        {
+            [Description("Xem đăng kí lớp")]
+            public const string View = "Permissions.Enrollments.View";
+            [Description("Tạo đăng kí lớp")]
+            public const string Create = "Permissions.Enrollments.Create";
+            [Description("Sửa đăng kí lớp")]
+            public const string Edit = "Permissions.Enrollments.Edit";
+            [Description("Xóa đăng kí lớp")]
+            public const string Delete = "Permissions.Enrollments.Delete";
+        }
+
+        public static class ClassSchedules
+        {
+            [Description("Xem lịch học")]
+            public const string View = "Permissions.ClassSchedules.View";
+            [Description("Tạo lịch học")]
+            public const string Create = "Permissions.ClassSchedules.Create";
+            [Description("Sửa lịch học")]
+            public const string Edit = "Permissions.ClassSchedules.Edit";
+            [Description("Xóa lịch học")]
+            public const string Delete = "Permissions.ClassSchedules.Delete";
+        }
     }
 }

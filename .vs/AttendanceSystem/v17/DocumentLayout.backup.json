@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\AttendanceSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|d:\\attendancesystem\\src\\attendancesystem.api\\controllers\\adminapi\\classcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\controllers\\adminapi\\classcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33DD8EB2-58D8-4126-9740-E08B46E1322A}|src\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj|d:\\attendancesystem\\src\\attendancesystem.data\\repositories\\classrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33DD8EB2-58D8-4126-9740-E08B46E1322A}|src\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj|solutionrelative:src\\attendancesystem.data\\repositories\\classrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|d:\\attendancesystem\\src\\attendancesystem.api\\controllers\\adminapi\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B38552A4-C3D7-4C0E-851C-63FE2D04B4C2}|src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj|solutionrelative:src\\attendancesystem.api\\controllers\\adminapi\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|d:\\attendancesystem\\src\\attendancesystem.core\\models\\content\\devicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\models\\content\\devicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|d:\\attendancesystem\\src\\attendancesystem.core\\repositories\\iclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\repositories\\iclassrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|d:\\attendancesystem\\src\\attendancesystem.core\\models\\content\\createupdatedevicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\models\\content\\createupdatedevicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33DD8EB2-58D8-4126-9740-E08B46E1322A}|src\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj|d:\\attendancesystem\\src\\attendancesystem.data\\repositories\\enrollmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33DD8EB2-58D8-4126-9740-E08B46E1322A}|src\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj|solutionrelative:src\\attendancesystem.data\\repositories\\enrollmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|d:\\attendancesystem\\src\\attendancesystem.core\\repositories\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A533DCC-4B80-48AB-8ABB-1D54DF7558F4}|src\\AttendanceSystem.Core\\AttendanceSystem.Core.csproj|solutionrelative:src\\attendancesystem.core\\repositories\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CreateUpdateDeviceRequest.cs",
-              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
-              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
-              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
-              "RelativeToolTip": "src\\AttendanceSystem.Core\\Models\\Content\\CreateUpdateDeviceRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T17:00:35.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DeviceDto.cs",
-              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
-              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
-              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
-              "RelativeToolTip": "src\\AttendanceSystem.Core\\Models\\Content\\DeviceDto.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T16:59:51.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "DeviceController.cs",
               "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
               "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
               "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
               "RelativeToolTip": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\DeviceController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowGIAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwDoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T16:21:05.683Z",
+              "WhenOpened": "2025-04-16T16:27:15.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClassRepository.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Data\\Repositories\\ClassRepository.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Data\\Repositories\\ClassRepository.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Data\\Repositories\\ClassRepository.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Data\\Repositories\\ClassRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAvwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:16:45.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IClassRepository.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Repositories\\IClassRepository.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\Repositories\\IClassRepository.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Repositories\\IClassRepository.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Core\\Repositories\\IClassRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:15:38.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClassController.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\ClassController.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\ClassController.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Api\\Controllers\\AdminApi\\ClassController.cs*",
+              "RelativeToolTip": "src\\AttendanceSystem.Api\\Controllers\\AdminApi\\ClassController.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwFgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:12:27.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnrollmentRepository.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Data\\Repositories\\EnrollmentRepository.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Data\\Repositories\\EnrollmentRepository.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Data\\Repositories\\EnrollmentRepository.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Data\\Repositories\\EnrollmentRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:05:41.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDeviceRepository.cs",
+              "DocumentMoniker": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Repositories\\IDeviceRepository.cs",
+              "RelativeDocumentMoniker": "src\\AttendanceSystem.Core\\Repositories\\IDeviceRepository.cs",
+              "ToolTip": "D:\\AttendanceSystem\\src\\AttendanceSystem.Core\\Repositories\\IDeviceRepository.cs",
+              "RelativeToolTip": "src\\AttendanceSystem.Core\\Repositories\\IDeviceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T16:03:35.597Z",
               "EditorCaption": ""
             }
           ]

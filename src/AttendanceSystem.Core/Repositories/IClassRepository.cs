@@ -7,7 +7,8 @@ namespace AttendanceSystem.Core.Repositories
 {
     public interface IClassRepository : IRepository<Class, Guid>
     {
+        Task<Class> GetByCourseCode(string courseCode);
         Task<List<Class>> GetLecturerClassAsync(Guid LecturerID);
-        Task<PageResult<ClassInListDto>> GetClassPagingAsync(string? courseName, string? courseCode, int pageIndex = 1, int pageSize = 10);
+        Task<PageResult<ClassDto>> GetAllPaging(string? keyword, int pageIndex = 1, int pageSize = 10);
     }
 }

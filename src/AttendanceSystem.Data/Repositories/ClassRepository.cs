@@ -16,28 +16,31 @@ namespace AttendanceSystem.Data.Repositories
             _mapper = mapper;
         }
 
-        public async Task<PageResult<ClassInListDto>> GetClassPagingAsync(string? courseName, string? courseCode, int pageIndex = 1, int pageSize = 10)
+        public async Task<PageResult<ClassDto>> GetAllPaging(string? keyword, int pageIndex = 1, int pageSize = 10)
         {
             var query = _context.Classes.AsQueryable();
-            if(!string.IsNullOrEmpty(courseName))
+            if (!string.IsNullOrWhiteSpace(keyword))
             {
-                query = query.Where(x => x.CourseName.Contains(courseName));
-            }
-            if(!string.IsNullOrEmpty(courseCode))
-            {
-                query = query.Where(x => x.CourseCode.Contains(courseCode));
+                query = query.Where(x => x.CourseCode.Contains(keyword));
             }
             var totalRow = await query.CountAsync();
-            query = query.OrderByDescending(x => x.LecturerID)
-                .Skip((pageIndex - 1) * pageSize)
-                .Take(pageSize);
-            return new PageResult<ClassInListDto>
+
+            query = query.OrderByDescending(x => x.CourseCode)
+               .Skip((pageIndex - 1) * pageSize)
+            .Take(pageSize);
+
+            return new PageResult<ClassDto>
             {
-                Results = await _mapper.ProjectTo<ClassInListDto>(query).ToListAsync(),
+                Results = await _mapper.ProjectTo<ClassDto>(query).ToListAsync(),
                 CurrentPage = pageIndex,
                 RowCount = totalRow,
                 PageSize = pageSize
             };
+        }
+
+        public Task<Class> GetByCourseCode(string courseCode)
+        {
+            return _context.Classes.FirstOrDefaultAsync(x => x.CourseCode == courseCode);
         }
 
         public Task<List<Class>> GetLecturerClassAsync(Guid LecturerId)

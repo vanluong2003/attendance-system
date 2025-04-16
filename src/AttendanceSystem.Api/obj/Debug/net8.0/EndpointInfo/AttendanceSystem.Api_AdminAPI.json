@@ -55,6 +55,204 @@
         }
       }
     },
+    "/api/admin/class": {
+      "post": {
+        "tags": [
+          "Class"
+        ],
+        "operationId": "CreateClass",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Class"
+        ],
+        "operationId": "UpdateClass",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Class"
+        ],
+        "operationId": "DeleteClass",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Class"
+        ],
+        "operationId": "GetClasses",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClassDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClassDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClassDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/admin/class/enroll": {
+      "post": {
+        "tags": [
+          "Class"
+        ],
+        "operationId": "CreateClassEnroll",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/admin/class/schedule": {
+      "post": {
+        "tags": [
+          "Class"
+        ],
+        "operationId": "CreateClassSchedule",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassScheduleRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassScheduleRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateClassScheduleRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/admin/class/{id}": {
       "get": {
         "tags": [
@@ -94,47 +292,6 @@
             }
           }
         }
-      },
-      "put": {
-        "tags": [
-          "Class"
-        ],
-        "operationId": "UpdateClass",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUpdateClassRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUpdateClassRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateUpdateClassRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
       }
     },
     "/api/admin/class/paging": {
@@ -142,18 +299,10 @@
         "tags": [
           "Class"
         ],
-        "operationId": "GetAllPaging",
+        "operationId": "GetClassesPaging",
         "parameters": [
           {
-            "name": "courseName",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          {
-            "name": "coureCode",
+            "name": "keyword",
             "in": "query",
             "schema": {
               "type": "string",
@@ -184,17 +333,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClassInListDtoPageResult"
+                  "$ref": "#/components/schemas/ClassDtoPageResult"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClassInListDtoPageResult"
+                  "$ref": "#/components/schemas/ClassDtoPageResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClassInListDtoPageResult"
+                  "$ref": "#/components/schemas/ClassDtoPageResult"
                 }
               }
             }
@@ -202,27 +351,67 @@
         }
       }
     },
-    "/api/admin/class": {
+    "/api/ClassSchedule": {
       "post": {
         "tags": [
-          "Class"
+          "ClassSchedule"
         ],
-        "operationId": "CreateClass",
+        "operationId": "CreateClassSchedule",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+                "$ref": "#/components/schemas/CreateUpdateClassScheduleRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+                "$ref": "#/components/schemas/CreateUpdateClassScheduleRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUpdateClassRequest"
+                "$ref": "#/components/schemas/CreateUpdateClassScheduleRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ClassSchedule"
+        ],
+        "operationId": "UpdateClassSchedule",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
               }
             }
           }
@@ -235,9 +424,9 @@
       },
       "delete": {
         "tags": [
-          "Class"
+          "ClassSchedule"
         ],
-        "operationId": "DeleteClasses",
+        "operationId": "DeleteClassSchedule",
         "parameters": [
           {
             "name": "ids",
@@ -257,30 +446,59 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/admin/class/entry/{uid}": {
+      },
       "get": {
         "tags": [
-          "Class"
+          "ClassSchedule"
         ],
-        "operationId": "GetAttendance",
+        "operationId": "GetClassSchedules",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClassScheduleDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClassScheduleDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClassScheduleDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ClassSchedule/{id}": {
+      "get": {
+        "tags": [
+          "ClassSchedule"
+        ],
+        "operationId": "GetClassScheduleById",
         "parameters": [
           {
-            "name": "uid",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
               "type": "string",
-              "nullable": true
-            }
-          },
-          {
-            "name": "location",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "nullable": true
+              "format": "uuid"
             }
           }
         ],
@@ -290,17 +508,74 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Enrollment"
+                  "$ref": "#/components/schemas/ClassScheduleDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Enrollment"
+                  "$ref": "#/components/schemas/ClassScheduleDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Enrollment"
+                  "$ref": "#/components/schemas/ClassScheduleDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ClassSchedule/paging": {
+      "get": {
+        "tags": [
+          "ClassSchedule"
+        ],
+        "operationId": "GetClassSchedulesPaging",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "pageIndex",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClassScheduleDtoPageResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClassScheduleDtoPageResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClassScheduleDtoPageResult"
                 }
               }
             }
@@ -533,6 +808,221 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DeviceDtoPageResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Enrollment": {
+      "post": {
+        "tags": [
+          "Enrollment"
+        ],
+        "operationId": "CreateEnrollment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Enrollment"
+        ],
+        "operationId": "UpdateEnrollment",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUpdateEnrollmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Enrollment"
+        ],
+        "operationId": "DeleteEnrollment",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Enrollment"
+        ],
+        "operationId": "GetEnrollments",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EnrollmentDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EnrollmentDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EnrollmentDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Enrollment/{id}": {
+      "get": {
+        "tags": [
+          "Enrollment"
+        ],
+        "operationId": "GetEnrollmentById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnrollmentDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnrollmentDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EnrollmentDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Enrollment/paging": {
+      "get": {
+        "tags": [
+          "Enrollment"
+        ],
+        "operationId": "GetEnrollmentsPaging",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentInClassDtoPageResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentInClassDtoPageResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentInClassDtoPageResult"
                 }
               }
             }
@@ -1341,13 +1831,15 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
           "courseName": {
-            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
           "courseCode": {
-            "maxLength": 50,
             "type": "string",
             "nullable": true
           },
@@ -1358,32 +1850,7 @@
         },
         "additionalProperties": false
       },
-      "ClassInListDto": {
-        "required": [
-          "courseCode",
-          "courseName",
-          "lecturerID"
-        ],
-        "type": "object",
-        "properties": {
-          "courseName": {
-            "maxLength": 100,
-            "type": "string",
-            "nullable": true
-          },
-          "courseCode": {
-            "maxLength": 50,
-            "type": "string",
-            "nullable": true
-          },
-          "lecturerID": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ClassInListDtoPageResult": {
+      "ClassDtoPageResult": {
         "type": "object",
         "properties": {
           "currentPage": {
@@ -1419,7 +1886,82 @@
           "results": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ClassInListDto"
+              "$ref": "#/components/schemas/ClassDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClassScheduleDto": {
+        "required": [
+          "classId",
+          "endTime",
+          "location",
+          "startTime"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "classId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClassScheduleDtoPageResult": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "lastRowOnPAge": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "additionalData": {
+            "type": "string",
+            "nullable": true
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ClassScheduleDto"
             },
             "nullable": true
           }
@@ -1449,6 +1991,34 @@
         },
         "additionalProperties": false
       },
+      "CreateUpdateClassScheduleRequest": {
+        "required": [
+          "classId",
+          "endTime",
+          "location",
+          "startTime"
+        ],
+        "type": "object",
+        "properties": {
+          "classId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateUpdateDeviceRequest": {
         "required": [
           "location",
@@ -1462,6 +2032,20 @@
           },
           "status": {
             "$ref": "#/components/schemas/DeviceStatus"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUpdateEnrollmentRequest": {
+        "type": "object",
+        "properties": {
+          "studentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "classId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -1594,7 +2178,7 @@
         "type": "integer",
         "format": "int32"
       },
-      "Enrollment": {
+      "EnrollmentDto": {
         "type": "object",
         "properties": {
           "studentId": {
@@ -1734,6 +2318,67 @@
         "properties": {
           "newPassword": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudentInClassDto": {
+        "type": "object",
+        "properties": {
+          "studentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "studentFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "studentLastName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudentInClassDtoPageResult": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "lastRowOnPAge": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "additionalData": {
+            "type": "string",
+            "nullable": true
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StudentInClassDto"
+            },
             "nullable": true
           }
         },

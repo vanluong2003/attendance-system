@@ -1,0 +1,101 @@
+<form class="form-horizontal form-label-left" skipValidation [formGroup]="form" (ngSubmit)="saveChange()">
+  <p-panel #pnlDetail header="Thông tin" [toggleable]="true" [collapsed]="false">
+    <div class="formgrid grid">
+      <div class="field col-12 md:col-6">
+        <label for="classId">Mã lớp <span class="required">*</span></label>
+        <input id="classId" type="text" pInputText [pKeyFilter]="noSpecial" formControlName="classId" [readonly]="true"
+        style="background-color: #f5f5f5; color: #888; cursor: not-allowed;"
+          [style]="{ width: '100%' }" />
+        <app-validation-message [entityForm]="form" fieldName="classId"
+          [validationMessages]="validationMessages"></app-validation-message>
+      </div>
+      
+      <div class="field col-12 md:col-6">
+        <label for="location">Phòng học <span class="required">*</span></label>
+        <input id="location" type="text" pInputText [pKeyFilter]="noSpecial" formControlName="location"
+          [style]="{ width: '100%' }" />
+        <app-validation-message [entityForm]="form" fieldName="location"
+          [validationMessages]="validationMessages"></app-validation-message>
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <label for="startTime">Bắt đầu lúc <span class="required">*</span></label>
+        <input
+          id="startTime"
+          type="datetime-local"
+          pInputText
+          formControlName="startTime"
+          [style]="{ width: '100%' }"
+          placeholder="yyyy-MM-ddTHH:mm"
+        />
+        <app-validation-message
+          [entityForm]="form"
+          fieldName="startTime"
+          [validationMessages]="validationMessages"
+        ></app-validation-message>
+      </div>
+      
+      <div class="field col-12 md:col-6">
+        <label for="endTime">Kết thúc lúc <span class="required">*</span></label>
+        <input
+          id="endTime"
+          type="datetime-local"
+          pInputText
+          formControlName="endTime"
+          [style]="{ width: '100%' }"
+          placeholder="yyyy-MM-ddTHH:mm"
+        />
+        <app-validation-message
+          [entityForm]="form"
+          fieldName="endTime"
+          [validationMessages]="validationMessages"
+        ></app-validation-message>
+      </div>
+      
+      
+      <!-- <div class="field-checkbox col-12 md:col-6">
+        <p-checkbox formControlName="status" [binary]="true" id="status"></p-checkbox>
+        <label for="status">Hoạt động</label>
+      </div> -->
+    </div>
+    <ng-template pTemplate="footer">
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid || btnDisabled">
+        {{ saveBtnName }}
+      </button>
+    </ng-template>
+
+    <div class="row mt-3" >
+      <p-table #dt [value]="items" selectionMode="multiple" dataKey="id" [(selection)]="selectedItems"
+        [metaKeySelection]="true">
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 10px">
+              <!-- <p-tableHeaderCheckbox></p-tableHeaderCheckbox> -->
+            </th>
+            <th>Phòng học</th>
+            <th>Bắt đầu</th>
+            <th>Kết thúc</th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-row>
+          <tr [pSelectableRow]="row">
+            <td style="width: 10px">
+              <span class="ui-column-title"></span>
+              <!-- <p-tableCheckbox [value]="row"></p-tableCheckbox> -->
+            </td>
+            <td>{{ row.location }}</td>
+            <td>{{ row.startTime | date: 'HH:mm dd/MM/yyyy' }}</td>
+            <td>{{ row.endTime | date: 'HH:mm dd/MM/yyyy'}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      </div>
+
+
+    <p-blockUI [target]="pnlDetail" [blocked]="blockedPanelDetail">
+      <p-progressSpinner [style]="{ width: '100px', height: '100px', position: 'absolute', top: '25%', left: '50%' }"
+        strokeWidth="2" animationDuration=".5s"></p-progressSpinner>
+    </p-blockUI>
+  </p-panel>
+</form>

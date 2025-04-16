@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "src\\AttendanceSystem.Api\\AttendanceSystem.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\AttendanceSystem.WebApp\\AttendanceSystem.WebApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

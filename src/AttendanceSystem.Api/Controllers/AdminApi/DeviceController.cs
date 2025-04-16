@@ -27,7 +27,11 @@ namespace AttendanceSystem.Api.Controllers.AdminApi
         public async Task<IActionResult> CreateDevice([FromBody] CreateUpdateDeviceRequest request)
         {
             var device = _mapper.Map<CreateUpdateDeviceRequest, Device>(request);
-
+            var checkDevice = await _unitOfWork.Devices.GetByLocation(device.Location);
+            if(checkDevice != null)
+            {
+                return BadRequest("Phòng học đã tồn tại thiết bị");
+            }
             _unitOfWork.Devices.Add(device);
 
             var result = await _unitOfWork.CompeleAsync();
@@ -43,8 +47,17 @@ namespace AttendanceSystem.Api.Controllers.AdminApi
             {
                 return NotFound();
             }
+            string preLocation = device.Location;
+            string curLocation = request.Location;
+            if(preLocation != curLocation)
+            {
+                var checkDevice = await _unitOfWork.Devices.GetByLocation(curLocation);
+                if (checkDevice != null)
+                {
+                    return BadRequest("Phòng học đã tồn tại thiết bị");
+                }
+            }
             _mapper.Map(request, device);
-
             await _unitOfWork.CompeleAsync();
             return Ok();
         }

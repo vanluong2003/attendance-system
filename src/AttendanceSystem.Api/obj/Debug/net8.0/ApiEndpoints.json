@@ -43,7 +43,28 @@
   },
   {
     "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
-    "Method": "DeleteClasses",
+    "Method": "UpdateClass",
+    "RelativePath": "api/admin/class",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateClassRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
+    "Method": "DeleteClass",
     "RelativePath": "api/admin/class",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -56,6 +77,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
+    "Method": "GetClasses",
+    "RelativePath": "api/admin/class",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AttendanceSystem.Core.Models.Content.ClassDto, AttendanceSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
@@ -85,20 +126,15 @@
   },
   {
     "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
-    "Method": "UpdateClass",
-    "RelativePath": "api/admin/class/{id}",
-    "HttpMethod": "PUT",
+    "Method": "CreateClassEnroll",
+    "RelativePath": "api/admin/class/enroll",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
         "Name": "request",
-        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateClassRequest",
+        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateEnrollmentRequest",
         "IsRequired": true
       }
     ],
@@ -106,50 +142,14 @@
   },
   {
     "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
-    "Method": "GetAttendance",
-    "RelativePath": "api/admin/class/entry/{uid}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "uid",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "location",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AttendanceSystem.Core.Domain.Content.Enrollment",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
-    "Method": "GetAllPaging",
+    "Method": "GetClassesPaging",
     "RelativePath": "api/admin/class/paging",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "courseName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "coureCode",
+        "Name": "keyword",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -166,7 +166,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "AttendanceSystem.Core.Models.PageResult\u00601[[AttendanceSystem.Core.Models.Content.ClassInListDto, AttendanceSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "AttendanceSystem.Core.Models.PageResult\u00601[[AttendanceSystem.Core.Models.Content.ClassDto, AttendanceSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -175,6 +175,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassController",
+    "Method": "CreateClassSchedule",
+    "RelativePath": "api/admin/class/schedule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateClassScheduleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.DeviceController",
@@ -717,6 +733,266 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassScheduleController",
+    "Method": "CreateClassSchedule",
+    "RelativePath": "api/ClassSchedule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateClassScheduleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassScheduleController",
+    "Method": "UpdateClassSchedule",
+    "RelativePath": "api/ClassSchedule",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateEnrollmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassScheduleController",
+    "Method": "DeleteClassSchedule",
+    "RelativePath": "api/ClassSchedule",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Guid[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassScheduleController",
+    "Method": "GetClassSchedules",
+    "RelativePath": "api/ClassSchedule",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AttendanceSystem.Core.Models.Content.ClassScheduleDto, AttendanceSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassScheduleController",
+    "Method": "GetClassScheduleById",
+    "RelativePath": "api/ClassSchedule/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AttendanceSystem.Core.Models.Content.ClassScheduleDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.ClassScheduleController",
+    "Method": "GetClassSchedulesPaging",
+    "RelativePath": "api/ClassSchedule/paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AttendanceSystem.Core.Models.PageResult\u00601[[AttendanceSystem.Core.Models.Content.ClassScheduleDto, AttendanceSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.EnrollmentController",
+    "Method": "CreateEnrollment",
+    "RelativePath": "api/Enrollment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateEnrollmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.EnrollmentController",
+    "Method": "UpdateEnrollment",
+    "RelativePath": "api/Enrollment",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "AttendanceSystem.Core.Models.Content.CreateUpdateEnrollmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.EnrollmentController",
+    "Method": "DeleteEnrollment",
+    "RelativePath": "api/Enrollment",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Guid[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.EnrollmentController",
+    "Method": "GetEnrollments",
+    "RelativePath": "api/Enrollment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AttendanceSystem.Core.Models.Content.EnrollmentDto, AttendanceSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.EnrollmentController",
+    "Method": "GetEnrollmentById",
+    "RelativePath": "api/Enrollment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AttendanceSystem.Core.Models.Content.EnrollmentDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AttendanceSystem.Api.Controllers.AdminApi.EnrollmentController",
+    "Method": "GetEnrollmentsPaging",
+    "RelativePath": "api/Enrollment/paging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AttendanceSystem.Core.Models.PageResult\u00601[[AttendanceSystem.Core.Models.Content.StudentInClassDto, AttendanceSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "AttendanceSystem.Api.Controllers.TestController",

@@ -12,6 +12,7 @@ using static AttendanceSystem.Core.SeedWorks.Constants.Permissions;
 using AttendanceSystem.Core.Models.System;
 using Microsoft.EntityFrameworkCore;
 using AttendanceSystem.Api.Extensions;
+using AttendanceSystem.Core.SeedWorks;
 
 namespace AttendanceSystem.Api.Controllers.AdminApi
 {
@@ -19,12 +20,14 @@ namespace AttendanceSystem.Api.Controllers.AdminApi
     public class UserController : ControllerBase
     {
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<AppUser> _userManager;
 
-        public UserController(UserManager<AppUser> userManager, IMapper mapper)
+        public UserController(UserManager<AppUser> userManager, IMapper mapper, IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _userManager = userManager;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet("{id}")]
@@ -188,7 +191,7 @@ namespace AttendanceSystem.Api.Controllers.AdminApi
 
         [HttpPut("{id}/assign-users")]
         [ValidateModel]
-        [Authorize(Permissions.Users.Edit)]
+        [Authorize(Users.Edit)]
         public async Task<IActionResult> AssignRolesToUser(string id, [FromBody] string[] roles)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -197,15 +200,13 @@ namespace AttendanceSystem.Api.Controllers.AdminApi
                 return NotFound();
             }
             var currentRoles = await _userManager.GetRolesAsync(user);
-            var removedResult = await _userManager.RemoveFromRolesAsync(user, currentRoles);
+            await _unitOfWork.Users.RemoveUserFromRoles(user.Id, currentRoles.ToArray());
             var addedResult = await _userManager.AddToRolesAsync(user, roles);
-            if (!addedResult.Succeeded || !removedResult.Succeeded)
+            if (!addedResult.Succeeded)
             {
                 List<IdentityError> addedErrorList = addedResult.Errors.ToList();
-                List<IdentityError> removedErrorList = removedResult.Errors.ToList();
                 var errorList = new List<IdentityError>();
                 errorList.AddRange(addedErrorList);
-                errorList.AddRange(removedErrorList);
 
                 return BadRequest(string.Join("<br/>", errorList.Select(x => x.Description)));
             }

@@ -2,6 +2,8 @@
 using AttendanceSystem.Core.Repositories;
 using AttendanceSystem.Data.SeedWorks;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using static AttendanceSystem.Core.SeedWorks.Constants.Permissions;
 
 namespace AttendanceSystem.Data.Repositories
 {
@@ -24,6 +26,11 @@ namespace AttendanceSystem.Data.Repositories
 
             await _context.Attendances.AddAsync(attendance);
             await _context.SaveChangesAsync();
+        }
+
+        public Task GetAttendanceByStudentAndClassSchedule(Guid studentId, Guid scheduleId)
+        {
+            return _context.Attendances.Where(x => x.StudentId == studentId && x.ScheduleId == scheduleId).FirstOrDefaultAsync();
         }
     }
 }

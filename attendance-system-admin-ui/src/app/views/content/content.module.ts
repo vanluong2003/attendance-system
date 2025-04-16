@@ -17,6 +17,10 @@ import { KeyFilterModule } from 'primeng/keyfilter';
 import { TeduSharedModule } from 'src/app/shared/modules/tedu-shared.module';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { ClassComponent } from './classes/class.component';
+import { ClassDetailComponent } from './classes/class-detail.component';
+import { ClassEnrollComponent } from './classes/class-enroll.component';
+import { ClassScheduleComponent } from './classes/class-schedule.component';
 
 @NgModule({
   imports: [
@@ -35,12 +39,15 @@ import { InputTextModule } from 'primeng/inputtext';
     KeyFilterModule,
     TeduSharedModule,
     ButtonModule,
-    InputTextModule
-    
+    InputTextModule,    
   ],
   declarations: [
     DeviceComponent,
-    DeviceDetailComponent
+    DeviceDetailComponent,
+    ClassComponent,
+    ClassDetailComponent,
+    ClassEnrollComponent,
+    ClassScheduleComponent
   ]
 })
 export class ContentModule {

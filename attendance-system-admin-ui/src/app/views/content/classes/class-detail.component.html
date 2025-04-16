@@ -1,0 +1,41 @@
+<form class="form-horizontal form-label-left" skipValidation [formGroup]="form" (ngSubmit)="saveChange()">
+  <p-panel #pnlDetail header="Thông tin" [toggleable]="true" [collapsed]="false">
+    <div class="formgrid grid">
+      <div class="field col-12 md:col-6">
+        <label for="courseName">Tên lớp <span class="required">*</span></label>
+        <input id="courseName" type="text" pInputText [pKeyFilter]="noSpecial" formControlName="courseName"
+          [style]="{ width: '100%' }" />
+        <app-validation-message [entityForm]="form" fieldName="courseName"
+          [validationMessages]="validationMessages"></app-validation-message>
+      </div>
+      <div class="field col-12 md:col-6">
+        <label for="courseCode">Mã lớp <span class="required">*</span></label>
+        <input id="courseCode" type="text" pInputText [pKeyFilter]="noSpecial" formControlName="courseCode"
+          [style]="{ width: '100%' }" />
+        <app-validation-message [entityForm]="form" fieldName="courseCode"
+          [validationMessages]="validationMessages"></app-validation-message>
+      </div>
+      <div class="field col-12 md:col-6">
+        <label for="lecturerID">Id Giáo viên <span class="required">*</span></label>
+        <input id="lecturerID" type="text" pInputText [pKeyFilter]="noSpecial" formControlName="lecturerID"
+          [style]="{ width: '100%' }" />
+        <app-validation-message [entityForm]="form" fieldName="lecturerID"
+          [validationMessages]="validationMessages"></app-validation-message>
+      </div>
+      <!-- <div class="field-checkbox col-12 md:col-6">
+        <p-checkbox formControlName="status" [binary]="true" id="status"></p-checkbox>
+        <label for="status">Hoạt động</label>
+      </div> -->
+    </div>
+    <ng-template pTemplate="footer">
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid || btnDisabled">
+        {{ saveBtnName }}
+      </button>
+    </ng-template>
+
+    <p-blockUI [target]="pnlDetail" [blocked]="blockedPanelDetail">
+      <p-progressSpinner [style]="{ width: '100px', height: '100px', position: 'absolute', top: '25%', left: '50%' }"
+        strokeWidth="2" animationDuration=".5s"></p-progressSpinner>
+    </p-blockUI>
+  </p-panel>
+</form>

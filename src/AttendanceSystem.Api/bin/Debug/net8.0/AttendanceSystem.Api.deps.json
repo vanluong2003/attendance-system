@@ -10,7 +10,7 @@
         "dependencies": {
           "AttendanceSystem.Core": "1.0.0",
           "AttendanceSystem.Data": "1.0.0",
-          "MQTTnet": "4.2.1.781",
+          "MQTTnet": "3.0.16",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.2",
           "Newtonsoft.Json": "13.0.3",
           "Swashbuckle.AspNetCore": "6.6.2"
@@ -73,6 +73,26 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.7.0.0",
             "fileVersion": "1.700.22.46903"
+          }
+        }
+      },
+      "MediatR/12.5.0": {
+        "dependencies": {
+          "MediatR.Contracts": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/MediatR.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.5.0.0"
+          }
+        }
+      },
+      "MediatR.Contracts/2.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
           }
         }
       },
@@ -499,11 +519,11 @@
           }
         }
       },
-      "MQTTnet/4.2.1.781": {
+      "MQTTnet/3.0.16": {
         "runtime": {
-          "lib/net7.0/MQTTnet.dll": {
-            "assemblyVersion": "4.2.1.781",
-            "fileVersion": "4.2.1.781"
+          "lib/net5.0/MQTTnet.dll": {
+            "assemblyVersion": "3.0.16.0",
+            "fileVersion": "3.0.16.0"
           }
         }
       },
@@ -711,6 +731,7 @@
       "AttendanceSystem.Core/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "MediatR": "12.5.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.1"
         },
         "runtime": {
@@ -771,6 +792,20 @@
       "sha512": "sha512-eHEiCO/8+MfNc9nH5dVew/+FvxdaGrkRL4OMNwIz0W79+wtJyEoeRlXJ3SrXhoy9XR58geBYKmzMR83VO7bcAw==",
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
+    },
+    "MediatR/12.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vqm2H8/nqL5NAJHPhsG1JOPwfkmbVrPyh4svdoRzu+uZh6Ex7PRoHBGsLYC0/RWCEJFqD1ohHNpteQvql9OktA==",
+      "path": "mediatr/12.5.0",
+      "hashPath": "mediatr.12.5.0.nupkg.sha512"
+    },
+    "MediatR.Contracts/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
+      "path": "mediatr.contracts/2.0.1",
+      "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.2": {
       "type": "package",
@@ -1066,12 +1101,12 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
-    "MQTTnet/4.2.1.781": {
+    "MQTTnet/3.0.16": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oKPAoW1Ynukm6ws6P3NmmMlNb3xIlPVf/89WVCkoWOJdz1dYtAdGYRdqe876pVsPru4j0uyU/hKf7iL3NU1r6w==",
-      "path": "mqttnet/4.2.1.781",
-      "hashPath": "mqttnet.4.2.1.781.nupkg.sha512"
+      "sha512": "sha512-xzqmKwVjTpT/X5zoLuhBCHmYVSRAlxeXqExvHLqfbt5OfTHfrD/q62IteJbOtlNG/SepeRpm76dYUZSU5o8y1A==",
+      "path": "mqttnet/3.0.16",
+      "hashPath": "mqttnet.3.0.16.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",

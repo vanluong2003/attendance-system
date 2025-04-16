@@ -7,5 +7,6 @@ namespace AttendanceSystem.Core.Repositories
     public interface IUserRepository : IRepository<AppUser, Guid>
     {
         Task<AppUser> GetUserByUIDAsync(string UID);
+        Task RemoveUserFromRoles(Guid userId, string[] roles);
     }
 }

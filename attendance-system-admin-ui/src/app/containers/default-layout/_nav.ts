@@ -31,6 +31,20 @@ export const navItems: INavData[] = [
         attributes: {
           "policyName": "Permissions.Devices.View"
         }
+      },
+      {
+        name: 'Điểm danh',
+        url: '/dashboard',
+        attributes: {
+          "policyName": "Permissions.Classes.View"
+        }
+      },
+      {
+        name: 'Cá nhân',
+        url: '/dashboard',
+        attributes: {
+          "policyName": "Permissions.Classes.View"
+        }
       }
     ]
   },

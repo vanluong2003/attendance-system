@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AttendanceSystem.Core\AttendanceSystem.Core.csproj" />
+    <ProjectReference Include="..\AttendanceSystem.Data\AttendanceSystem.Data.csproj" />
+  </ItemGroup>
+
 </Project>

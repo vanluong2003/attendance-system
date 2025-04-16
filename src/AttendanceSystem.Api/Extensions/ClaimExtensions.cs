@@ -33,5 +33,15 @@ namespace AttendanceSystem.Api.Extensions
                 await roleManager.AddClaimAsync(role, new Claim("Permission", permission));
             }
         }
+
+        //public static Guid GetUserId(this ClaimsPrincipal claims)
+        //{
+        //    var userId = claims.FindFirstValue(ClaimTypes.NameIdentifier);
+        //    if (userId == null)
+        //    {
+        //        return Guid.Empty;
+        //    }
+        //    return Guid.Parse(userId);
+        //}
     }
 }

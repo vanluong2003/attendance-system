@@ -7,6 +7,7 @@ namespace AttendanceSystem.Core.Repositories
 {
     public interface IDeviceRepository : IRepository<Device, Guid>
     {
+        Task<Device> GetByLocation(string location);
         Task<PageResult<DeviceDto>> GetAllPaging(string? keyword, int pageIndex = 1, int pageSize = 10);
     }
 }
